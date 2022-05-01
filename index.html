@@ -196,6 +196,11 @@
           ],
           projects: [
             {
+              name: "单html文件的个人项目展示页",
+              description: `<a href="https://github.com/coycs/projects-page-template" target="_blank">https://github.com/coycs/projects-page-template</a><div>因为没有比较符合自己需求的个人项目展示页，所以自己简单写了一个，用的是vue+element-ui</div>`,
+              categories: ["网站模板"],
+            },
+            {
               name: "Hypothesis导出为markdown文件",
               description: `<a href="https://greasyfork.org/zh-CN/scripts/441640" target="_blank">https://greasyfork.org/zh-CN/scripts/441640</a><div>导出Hypothesis高亮和注释为markdown文件。</div>`,
               categories: ["油猴脚本"],
@@ -228,7 +233,7 @@
               let p = this.projects[i];
               for (let j = 0; j < p.categories.length; j++) {
                 let c = p.categories[j];
-                if (-categories.indexOf(c)) {
+                if (categories.indexOf(c)==-1) {
                   categories.push(c);
                 }
               }
